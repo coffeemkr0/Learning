@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Course.cs" />
-    <Compile Include="IChecker.cs" />
+    <Compile Include="ITermOfferingChecker.cs" />
     <Compile Include="Instructor.cs" />
     <Compile Include="InstructorChecker.cs" />
     <Compile Include="InstructorLevel.cs" />

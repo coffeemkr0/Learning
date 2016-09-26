@@ -6,30 +6,19 @@ using System.Threading.Tasks;
 
 namespace TermOfferingConsole
 {
-    public class InstructorChecker : IChecker
+    /// <summary>
+    /// A class that can be used to check to see if a term offering is valid.
+    /// </summary>
+    public class InstructorChecker : ITermOfferingChecker
     {
-        public bool Check(TermOffering termOffering, PrintLogger logger)
-        {
-            bool result = true;
-
-            foreach (var offering in termOffering.CourseOfferings)
-            {
-                if(!IsOk(offering, termOffering, logger))
-                {
-                    result = false;
-                }
-            }
-
-            return result;
-        }
-
+        #region Private Methods
         private bool IsOk(Offering offering, TermOffering termOffering, PrintLogger logger)
         {
             bool result = true;
 
             foreach (var otherOffering in termOffering.CourseOfferings)
             {
-                if(offering.CRN != otherOffering.CRN)
+                if (offering.CRN != otherOffering.CRN)
                 {
                     if (offering.Instructor.BlazerId == otherOffering.Instructor.BlazerId)
                     {
@@ -47,5 +36,29 @@ namespace TermOfferingConsole
 
             return result;
         }
+        #endregion
+
+        #region Public Methods
+        /// <summary>
+        /// Checks to see if the term offering has any scheduling conflicts for instructors.
+        /// </summary>
+        /// <param name="termOffering">The term offering to check.</param>
+        /// <param name="logger">A logger that can log any conflicts.</param>
+        /// <returns>true if the term offering has no conflicts, otherwise false.</returns>
+        public bool Check(TermOffering termOffering, PrintLogger logger)
+        {
+            bool result = true;
+
+            foreach (var offering in termOffering.CourseOfferings)
+            {
+                if(!IsOk(offering, termOffering, logger))
+                {
+                    result = false;
+                }
+            }
+
+            return result;
+        }
+        #endregion
     }
 }

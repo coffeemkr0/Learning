@@ -12,8 +12,14 @@ namespace TermOfferingConsole
     public class Room
     {
         #region Properties
+        /// <summary>
+        /// Gets or sets the room number for the room.
+        /// </summary>
         public string RoomNumber { get; set; }
 
+        /// <summary>
+        /// Gets or sets the building that the room is in.
+        /// </summary>
         public string Building { get; set; }
         #endregion
     }

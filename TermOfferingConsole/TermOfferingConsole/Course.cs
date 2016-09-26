@@ -12,10 +12,19 @@ namespace TermOfferingConsole
     public class Course
     {
         #region Properties
+        /// <summary>
+        /// Gets or sets the descriptive name of the course.
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets the course code that is less descriptive
+        /// </summary>
         public string Code { get; set; }
 
+        /// <summary>
+        /// Gets or sets the amount of credits that the course is worth
+        /// </summary>
         public float Credits { get; set; }
         #endregion
 

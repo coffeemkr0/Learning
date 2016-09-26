@@ -28,6 +28,9 @@ namespace TermOfferingConsole
         /// </summary>
         public DateTime EndTime { get; set; }
 
+        /// <summary>
+        /// Gets an instance of TimeSlot that represents the 2A time slot.
+        /// </summary>
         public static TimeSlot TimeSlot_2A
         {
             get
@@ -41,6 +44,9 @@ namespace TermOfferingConsole
             }
         }
 
+        /// <summary>
+        /// Gets an instance of TimeSlot that represents the 2B time slot.
+        /// </summary>
         public static TimeSlot TimeSlot_2B
         {
             get
@@ -54,6 +60,9 @@ namespace TermOfferingConsole
             }
         }
 
+        /// <summary>
+        /// Gets an instance of TimeSlot that represents the 2C time slot.
+        /// </summary>
         public static TimeSlot TimeSlot_2C
         {
             get
@@ -67,6 +76,9 @@ namespace TermOfferingConsole
             }
         }
 
+        /// <summary>
+        /// Gets an instance of TimeSlot that represents the 2D time slot.
+        /// </summary>
         public static TimeSlot TimeSlot_2D
         {
             get
@@ -86,6 +98,10 @@ namespace TermOfferingConsole
         #endregion
 
         #region Public Methods
+        /// <summary>
+        /// Gets a list of valid TimeSlot objects that are available.
+        /// </summary>
+        /// <returns></returns>
         public static List<TimeSlot> GetTimeSlots()
         {
             List<TimeSlot> timeSlots = new List<TimeSlot>();
@@ -107,17 +123,20 @@ namespace TermOfferingConsole
         /// </summary>
         /// <param name="x">The first time slot to check</param>
         /// <param name="y">The second time slot to check</param>
-        /// <returns>true of the time slots overlap, otherwise false</returns>
+        /// <returns>true if the time slots overlap, otherwise false</returns>
         public static bool DoTimeSlotsOverlap(TimeSlot x, TimeSlot y)
         {
-            if (x.StartTime == y.StartTime) return true;
+            //If the two time slots are the same, they overlap
+            if (x.StartTime == y.StartTime && x.EndTime == y.EndTime) return true;
 
+            //Otherwise, if the start time or end time of the first time slot falls withing the range of the other time slot, they overlap
             if((x.StartTime > y.StartTime && x.EndTime < y.EndTime) ||
                 (x.EndTime > y.StartTime && x.EndTime < y.EndTime))
             {
                 return true;
             }
 
+            //Otherwise they do not overlap
             return false;
         }
         #endregion
