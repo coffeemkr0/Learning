@@ -1,0 +1,59 @@
+Code,Sec,Credit,Name,Instructor,BlazerID,Office,Location
+EE011,0,0,Coop/Internship in EE,David G Green,Dgreen,BEC 256A,TBA
+EE210,AW,3,Digital Logic,Dalton Nelson,dnelson,BEC 265F,BEC 354
+EE233,2C,3,Engineering Programming Method,Dalton Nelson,dnelson,BEC 265F,BEC 354
+EE254,2F,3,Applied Numerical Methods,Dalton Nelson,dnelson,BEC 265F,BEC 267
+EE300,AU,3,Engineering Problem Solving II,Jon R Marstrander,jmars,BEC 265A,BEC 354
+EE305,EQ,3,Fund of Electrical Engineering,John L Feagin,jlfeagin,adjunct,BEC 158
+EE312,2D,3,Electrical Systems,Karthikeyan Lingasubramanian,klinga,BEC 255D,BEC 158
+EE312,2F,3,Electrical Systems,Karthikeyan Lingasubramanian,klinga,BEC 255D,BEC 158
+EE314,2D,3,Electrical Circuits,Gregg L Vaughn,gvaughn,BEC 265D,BEC 155
+EE316,AV,4,Electrical Networks,Mohammad R Haider,mrhaider,BEC 255E,BEC 154
+EE316L,EQ,0,Electrical Networks Lab,Mohammad R Haider,mrhaider,BEC 255E,BEC 268
+EE316L,HQ,0,Electrical Networks Lab,Mohammad R Haider,mrhaider,BEC 255E,BEC 268
+EE318,AY,3,Methods of System Analysis,Arie Nakhmani,anry,BEC 261D,BEC 267
+EE333,2E,3,Engr Programming using Objects,David G Green,DGreen,BEC 256A,BEC 267
+EE337,EQ,4,Intro to Microprocessors,Jon R Marstrander,jmars,BEC 265A,BEC 354
+EE337L,DQ,0,Intro to Microprocessors Lab,Jon R Marstrander,jmars,BEC 265A,BEC 272
+EE337L,P3,0,Intro to Microprocessors Lab,Jon R Marstrander,jmars,BEC 265A,BEC 272
+EE337L,P4,0,Intro to Microprocessors Lab,Jon R Marstrander,jmars,BEC 265A,BEC 272
+EE341,AV,3,Electromagnetics,Thomas Anthony,tanthony,BEC 253,BEC 267
+EE361,3B,4,Machinery I,Mohammad R Haider,mrhaider,BEC 255E,BEC 158
+EE361L,DQ,0,Machinery I Lab,Mohammad R Haider,mrhaider,BEC 255E,BEC 267
+EE361L,EQ,0,Machinery I Lab,Mohammad R Haider,mrhaider,BEC 255E,BEC 267
+EE361L,M6,0,Machinery I Lab,Mohammad R Haider,mrhaider,BEC 255E,BEC 267
+EE421,AW,3,Communication Systems,Gregg L Vaughn,gvaughn,BEC 265D,BEC 155
+EE431,SU,4,Analog Integrated Electronics,Kenneth A Kuhn,kkuhn,adjunct,BEC 155
+EE461,EQ,3,Machinery II,Shih-Min Hsu,smhsu,adjunct,BEC 267
+EE472,3B,3,Power Systems II,Shih-Min Hsu,smhsu,adjunct,BEC 267
+EE492,0,4,Honors Research I,Karthikeyan Lingasubramanian,klinga,BEC 255D,TBA
+EE493,0,4,Honors Research II,Karthikeyan Lingasubramanian,klinga,BEC 255D,TBA
+EE498,7R,3,Team Design Project I,David G Green,DGreen,BEC 256A,BEC 355
+EE499,7R,3,Team Design Project II,David G Green,DGreen,BEC 256A,BEC 354
+EE531,SU,4,Analog Integrated Electronics,Kenneth A Kuhn,kkuhn,adjunct,BEC 155
+EE572,3B,3,Power Systems II,Shih-Min Hsu,smhsu,adjunct,TBA
+EE605,7Q,3,Embedded Sys for Indus Scholar,Arie Nakhmani,anry,BEC 261D,BEC 154
+EE650,EM,3,Software Engineering,Murat M Tanik,mtanik,BEC 256B,BEC 267
+EE655,2G,3,Cloud Computing,Leon Jololian,ljololian,adjunct,BEC 267
+EE690,7J,3,ST: Computer Vision,Arie Nakhmani,anry,BEC 261D,TBA
+EE690,AU,3,ST: Advanced Engr Math,Hassan Moore,hmoore,BEC 257D,BEC 267
+EE690,EL,3,ST: Pwr&RF Smicond Electronics,Mohammad R Haider,mrhaider,BEC 255E,BEC 267
+EE697,0,3,Graduate Project,Murat M Tanik,mtanik,BEC 256B,TBA
+EE698,0,3,Non-Thesis Research,Murat M Tanik,mtanik,BEC 256B,TBA
+EE699,0,3,Thesis Research,Murat M Tanik,mtanik,BEC 256B,TBA
+EE699,0,3,Thesis Research,Gregory A Franklin,gfrankli,BEC 265C,TBA
+EE699,0,3,Thesis Research,Mohammad R Haider,mrhaider,BEC 255E,TBA
+EE699,0,3,Thesis Research,Karthikeyan Lingasubramanian,klinga,BEC 255D,TBA
+EE699,0,3,Thesis Research,Arie Nakhmani,anry,BEC 261D,TBA
+EE699,0,3,Thesis Research,Gregg L Vaughn,gvaughn,BEC 265D,TBA
+EE750,EM,3,Software Engineering,Murat M Tanik,mtanik,BEC 256B,TBA
+EE755,2G,3,Cloud Computing,Leon Jololian,ljololian,adjunct,TBA
+EE790,7J,3,ST: Computer Vision,Arie Nakhmani,anry,BEC 261D,TBA
+EE790,EL,3,ST: Pwr&RF Semicond Electronic,Mohammad R Haider,mrhaider,BEC 255E,BEC 267
+EE798,0,3,Non-Dissertation Research,Murat M Tanik,mtanik,BEC 256B,TBA
+EE799,0,3,Dissertation Research,Murat M Tanik,mtanik,BEC 256B,TBA
+EE799,0,3,Dissertation Research,Gregory A Franklin,gfrankli,BEC 265C,TBA
+EE799,0,3,Dissertation Research,Mohammad R Haider,mrhaider,BEC 255E,TBA
+EE799,0,3,Dissertation Research,Karthikeyan Lingasubramanian,klinga,BEC 255D,TBA
+EE799,0,3,Dissertation Research,Arie Nakhmani,anry,BEC 261D,TBA
+EE799,0,3,Dissertation Research,Gregg L Vaughn,gvaughn,BEC 265D,TBA

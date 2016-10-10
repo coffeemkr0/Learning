@@ -126,6 +126,12 @@ namespace TermOfferingConsole
         /// <returns>true if the time slots overlap, otherwise false</returns>
         public static bool DoTimeSlotsOverlap(TimeSlot x, TimeSlot y)
         {
+            //If they have the same name, they are the same time slot, so they do overlap
+            if (x.Name == y.Name) return true;
+
+            //Shortcut escape logic to avoid time slots that only have a name
+            if (x.StartTime == DateTime.MinValue) return false;
+
             //If the two time slots are the same, they overlap
             if (x.StartTime == y.StartTime && x.EndTime == y.EndTime) return true;
 
@@ -138,6 +144,21 @@ namespace TermOfferingConsole
 
             //Otherwise they do not overlap
             return false;
+        }
+
+        public static TimeSlot FromString(string input)
+        {
+            switch (input)
+            {
+                case "2A":
+                    return TimeSlot_2A;
+
+                default:
+                    return new TimeSlot()
+                    {
+                        Name = input
+                    };
+            }
         }
         #endregion
     }

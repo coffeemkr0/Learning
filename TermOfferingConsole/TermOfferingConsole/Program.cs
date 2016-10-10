@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,12 @@ namespace TermOfferingConsole
             //	add	a	problem	item
             termOffering.CourseOfferings.Add(o4);
             Console.WriteLine("Second	test:	");
+            Console.WriteLine(termOffering.Check(pl) ? "Valid	Schedule" : "Invalid	Schedule	--	see	above.");
+
+            //Test loading from a file and then checking it
+            termOffering = TermOffering.LoadFromFile("termoffering.csv", "Fall", 2016);
+            termOffering.Checkers.Add(new InstructorChecker());
+            Console.WriteLine("Running test on term offering loaded from file.");
             Console.WriteLine(termOffering.Check(pl) ? "Valid	Schedule" : "Invalid	Schedule	--	see	above.");
 
             Console.ReadLine();

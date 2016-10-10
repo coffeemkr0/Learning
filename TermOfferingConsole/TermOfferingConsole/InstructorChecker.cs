@@ -49,11 +49,14 @@ namespace TermOfferingConsole
         {
             bool result = true;
 
+            List<string> conflicts = new List<string>();
+
             foreach (var offering in termOffering.CourseOfferings)
             {
-                if(!IsOk(offering, termOffering, logger))
+                if(!conflicts.Contains(offering.CRN) && !IsOk(offering, termOffering, logger))
                 {
                     result = false;
+                    conflicts.Add(offering.CRN);
                 }
             }
 

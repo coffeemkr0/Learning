@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TermOfferingConsole
 {
@@ -67,6 +68,49 @@ namespace TermOfferingConsole
             }
 
             return result;
+        }
+
+        public static TermOffering LoadFromFile(string file, string season, int year)
+        {
+            TermOffering termOffering = new TermOffering()
+            {
+                Season = season,
+                Year = year
+            };
+            
+            using (var reader = new StreamReader(file))
+            {
+                //Skip the first line
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    var readLine = reader.ReadLine();
+
+                    //Code,Sec,Credit,Name,Instructor,BlazerID,Office,Location
+                    //EE011,0,0,Coop / Internship in EE,David G Green,Dgreen,BEC 256A,TBA
+                    string[] lineParts = readLine.Split(',');
+
+                    float credits = 0;
+                    if(!float.TryParse(lineParts[2], out credits))
+                    {
+                        throw new Exception("Credits is not a valid number.");
+                    }
+
+                    Course course = new Course(lineParts[3], lineParts[0], credits);
+                    Instructor instructor = new Instructor(lineParts[4], lineParts[5], lineParts[6]);
+                    Room room = new Room()
+                    {
+                        RoomNumber = lineParts[7]
+                    };
+
+                    termOffering.CourseOfferings.Add(new Offering(course, instructor,
+                        room, TimeSlot.FromString(lineParts[1])));
+                    
+                }
+            }
+
+            return termOffering;
         }
         #endregion
     }
