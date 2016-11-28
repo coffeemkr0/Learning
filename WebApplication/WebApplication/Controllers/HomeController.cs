@@ -8,9 +8,9 @@ namespace WebApplication.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ActionResult Index()
         {
-            return "War Eagle";
+            return new FilePathResult("Images\\test.jpg", "image/jpeg");
         }
 
         public ActionResult About()
